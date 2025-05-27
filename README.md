@@ -38,7 +38,6 @@ This architecture enables compact and discriminative image embeddings suitable f
     "samples": [
       "gallery_023.jpg",
       "gallery_074.jpg",
-      ...
     ]
   }
 ]
