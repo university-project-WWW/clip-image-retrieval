@@ -63,3 +63,8 @@ pip install -r requirements.txt
 - [@stanghee](https://github.com/stanghee) 
 - [@lorenzoattolico](https://github.com/lorenzoattolico) 
 - [@MolteniF](https://github.com/MolteniF)
+
+## 📄 License
+
+This project is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+[![License: CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
