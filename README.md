@@ -83,6 +83,20 @@ your_dataset/
 
 ---
 
+## 🚀 Usage
+
+### Complete Pipeline (Training + Inference)
+
+```bash
+# Standard pipeline
+python main.py
+
+# Pipeline with advanced techniques (TTA + re-ranking + query expansion)
+python main.py --advanced
+```
+
+---
+
 ## 🗃️ Dataset
 
 The model was trained and evaluated on the following datasets:
