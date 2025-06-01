@@ -61,7 +61,7 @@ git clone https://github.com/stanghee/clip-image-retrieval.git
 cd clip-image-retrieval
 ```
 
-2. Install dependencies:
+2. Install dependencies (Use Python 3.12.9):
 
 ```bash
 pip install -r requirements.txt
