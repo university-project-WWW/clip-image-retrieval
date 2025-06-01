@@ -64,7 +64,7 @@ cd clip-image-retrieval
 2. Install dependencies:
 
 ```bash
-pip install -r requirements_txt.txt
+pip install -r requirements.txt
 ```
 
 3. Prepare the dataset:
