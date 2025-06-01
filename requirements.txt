@@ -1,5 +1,5 @@
 torch==2.5.1
-torchvision==0.18.1
+torchvision==0.20.1
 timm==0.9.12
 pytorch-metric-learning==1.7.3
 numpy==1.26.4
