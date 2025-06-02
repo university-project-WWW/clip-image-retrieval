@@ -81,6 +81,13 @@ your_dataset/
     └── gallery/                  # Gallery images (flat structure)
 ```
 
+4. Update the dataset path in config.py:
+   
+Open the file config.py and update the dataset path fields to point to the dataset you just prepared. For example:
+```python
+ROOT_DIR = Path("your_dataset_path")
+```
+
 ---
 
 ## 🚀 Usage
