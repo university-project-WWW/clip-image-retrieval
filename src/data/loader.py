@@ -13,6 +13,8 @@ from src.data.datasets import FlatFolderDataset
 from src.data.samplers import get_sampler, get_dataloader
 from src.data.transforms import get_train_transforms, get_val_transforms
 from torchvision.datasets import ImageFolder
+from sklearn.model_selection import train_test_split
+
 
 def load_datasets(train_transform, val_transform, val_split=0.1, seed=123):
     """
@@ -32,8 +34,18 @@ def load_datasets(train_transform, val_transform, val_split=0.1, seed=123):
     labels = np.array([y for _, y in full_train.imgs])
     
     # Split into train and validation
-    sss = StratifiedShuffleSplit(n_splits=1, test_size=val_split, random_state=seed)
-    train_idx, val_idx = next(sss.split(np.zeros(len(labels)), labels))
+
+    # StratifiedShuffle removed in competition (due to dataset structure)
+    # sss = StratifiedShuffleSplit(n_splits=1, test_size=val_split, random_state=seed)
+    # train_idx, val_idx = next(sss.split(np.zeros(len(labels)), labels))
+
+    #Version for competition:
+    train_idx, val_idx = train_test_split(
+        np.arange(len(labels)),
+        test_size=0.10,
+        random_state=seed,
+        stratify=None  # niente stratificazione
+    )
     
     # Create train and validation datasets
     train_ds = Subset(full_train, train_idx)
