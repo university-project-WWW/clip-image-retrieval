@@ -108,7 +108,7 @@ python main.py --advanced
 
 The model was trained and evaluated on the following datasets:
 
-- Cifar100
+- OxfordPets
 - Food101
 
 ---
