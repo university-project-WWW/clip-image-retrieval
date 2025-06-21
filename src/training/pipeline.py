@@ -39,7 +39,7 @@ def train(args):
     val_transform = get_val_transforms(args.img_size)
     
     # Load datasets
-    datasets = load_datasets(train_transform, val_transform, val_split=0.3, seed=args.seed) #da cambiare poi a 0.1 di nuovo
+    datasets = load_datasets(train_transform, val_transform, val_split=0.1, seed=args.seed)
     print(f"Train: {len(datasets['train_ds'])} | Val: {len(datasets['val_ds'])}")
     
     # Create dataloaders
