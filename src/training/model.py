@@ -67,7 +67,7 @@ class RetrievalCLIP(nn.Module):
         # Embedding projection head
         self.fc = nn.Linear(hid_dim, cfg["emb_dim"], bias=False)
         self.bn = nn.BatchNorm1d(cfg["emb_dim"])
-        self.do = nn.Dropout(0.1)  # Reduced from 0.2 to 0.1 (CLIP has internal regularization)
+        self.do = nn.Dropout(0.1)
 
     def forward(self, x):
         """Forward pass of the model."""
