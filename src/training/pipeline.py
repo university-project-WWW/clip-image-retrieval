@@ -80,18 +80,11 @@ def train_model(model, optimizer, scheduler, train_loader, val_loader, cfg, num_
     scaler = torch.amp.GradScaler()
     best_model_path = Path("models/best_model.pth")
     
-    # Calculate unfreeze epoch
-    unfreeze_epoch = int(0.3 * num_epochs)
     
     for epoch in range(1, num_epochs + 1):
         t0 = time.time()
         model.train()
         running_loss = 0.0
-        
-        # Unfreeze backbone if it's time
-        if epoch == unfreeze_epoch:
-            model.unfreeze_all()
-            print(f"--- Epoch {epoch}: backbone unfrozen")
             
         # Get loss function and miner for this epoch
         criterion, miner = get_loss_and_miner(epoch, cfg, DEVICE)
