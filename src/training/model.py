@@ -89,13 +89,3 @@ class RetrievalCLIP(nn.Module):
         # L2 normalization for cosine similarity
         return F.normalize(z, dim=1)  # (B, emb_dim)
 
-    def freeze_backbone(self, n_blocks=12):
-        """Freeze a portion of the ViT backbone blocks."""
-        for i, blk in enumerate(self.backbone.blocks):
-            for p in blk.parameters():
-                p.requires_grad = (i >= n_blocks)
-    
-    def unfreeze_all(self):
-        """Unfreeze all backbone parameters."""
-        for p in self.backbone.parameters():
-            p.requires_grad = True
